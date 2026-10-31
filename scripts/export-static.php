@@ -5,10 +5,18 @@ $app = require_once __DIR__ . '/../bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
 $target = __DIR__ . '/../docs';
 if (!is_dir($target)) mkdir($target, 0777, true);
-$html = view('welcome')->render();
-$html = preg_replace('#(href|src)="(?:https?://[^"]+)?/build/#', '$1="/mistfitscc/build/', $html);
-$html = preg_replace('#(src)="(?:https?://[^"]+)?/images/#', '$1="/mistfitscc/images/', $html);
-file_put_contents($target . '/index.html', $html);
+$renderStatic = static function (string $view): string {
+    $html = view($view)->render();
+    $html = preg_replace('#(href|src)="(?:https?://[^"]+)?/build/#', '$1="/mistfitscc/build/', $html);
+    $html = preg_replace('#(src)="(?:https?://[^"]+)?/images/#', '$1="/mistfitscc/images/', $html);
+    $html = preg_replace('#href="https?://[^"/]+([^\"]*)"#', 'href="/mistfitscc$1"', $html);
+    return str_replace('href="/mistfitscc/shop"', 'href="/mistfitscc/shop/"', $html);
+};
+file_put_contents($target . '/index.html', $renderStatic('welcome'));
+if (!is_dir($target . '/shop')) mkdir($target . '/shop', 0777, true);
+file_put_contents($target . '/shop/index.html', $renderStatic('shop'));
+if (!is_dir($target . '/rides')) mkdir($target . '/rides', 0777, true);
+file_put_contents($target . '/rides/index.html', $renderStatic('rides'));
 file_put_contents($target . '/.nojekyll', '');
 $source = __DIR__ . '/../public/build'; $destination = $target . '/build';
 if (is_dir($destination)) {

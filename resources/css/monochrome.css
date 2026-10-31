@@ -1,0 +1,22 @@
+/* Technical monochrome system: neutral ink, paper, hard rules and no brand colour. */
+:root { color-scheme: light; }
+body { background: #fff !important; color: #050505 !important; }
+.hero-statement { display: none !important; }
+#club { display: none !important; }
+#kit { display: none !important; }
+#gallery { display: none !important; }
+.hero { background: #050505 !important; }.hero-image { filter: grayscale(1) contrast(1.18) brightness(.82) !important; }.hero-wash { background: linear-gradient(90deg, rgba(0,0,0,.79), rgba(0,0,0,.15) 62%, rgba(0,0,0,.22)), linear-gradient(0deg, rgba(0,0,0,.56), transparent 36%) !important; }
+.section, .ride-list, .ride-row, .race-list, .race-list div, .journal-list, .journal-entry, .join-copy ul, .join-copy li, .big-cta, .worldwide-section { border-color: #050505 !important; }
+.sage-panel, .join-section, .worldwide-section { background: #fff !important; }
+.dark-panel, .club-carousel, footer { background: #050505 !important; color: #fff !important; }.dark-panel .section-label, .kit-item p, .footer-bottom { color: #bcbcbc !important; }
+.race-list em, .rider em { color: #4a4a4a !important; }.ride-detail { color: #4a4a4a !important; }
+.portrait { background-color: #ededed !important; background-image: linear-gradient(130deg, transparent 0 43%, #111 43.3% 55%, transparent 55.3%), radial-gradient(ellipse at 63% 52%, #050505 0 18%, transparent 18.4%), linear-gradient(160deg, #e8e8e8 0 40%, #888 40% 100%) !important; filter: grayscale(1) !important; }.portrait:after { background: #050505 !important; }
+.kit-graphic, .kit-item:nth-child(2) .kit-graphic, .kit-item:nth-child(3) .kit-graphic, .kit-item:nth-child(4) .kit-graphic, .kit-item:nth-child(5) .kit-graphic { background: #e7e7e7 !important; color: #050505 !important; border: 1px solid #050505; }.kit-item:nth-child(even) .kit-graphic { background: #050505 !important; color: #fff !important; }.garment, .kit-item:nth-child(2) .garment, .kit-item:nth-child(3) .garment, .kit-item:nth-child(5) .garment { background: #050505 !important; }.kit-item:nth-child(even) .garment { background: #f5f5f5 !important; }.kit-item:nth-child(4) .garment { background: #050505 !important; }
+.gallery-shot { background: #050505 !important; border: 1px solid #050505; }.gallery-shot:before { background: linear-gradient(150deg, transparent 0 35%, #fff 35.5% 44%, transparent 44.5%), linear-gradient(25deg, #111 0 44%, #777 44% 63%, #000 63%) !important; filter: grayscale(1) !important; }
+.brand-card, .brand-card:nth-child(2n), .brand-card:nth-child(3n), .brand-card:nth-child(5n) { background: #fff !important; color: #050505 !important; border: 1px solid #050505; }.brand-card:nth-child(even) { background: #050505 !important; color: #fff !important; }
+.news-banner { background: #050505 !important; color: #fff !important; border-bottom: 1px solid #fff; }.news-dismiss { color: #fff !important; }.news-banner.is-dismissed + .site-header { color: #fff !important; }
+.mobile-nav { background: #050505 !important; color: #fff !important; }.menu-toggle span { background: #fff !important; }
+.desktop-nav .nav-icon[aria-label="Search"], .desktop-nav .nav-icon[aria-label="Explore worldwide"] { display: none !important; }
+.carousel-dots button { border-color: #fff !important; }.carousel-dots button.active { background: #fff !important; }.footer-top { border-color: #fff !important; }
+.footer-socials { display: flex; gap: 10px; align-items: center; margin-top: 16px; }.footer-socials a { width: 25px; height: 25px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 12px; font-style: italic; font-weight: 900; }.footer-socials svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }.footer-socials .fill-dot { fill: currentColor; stroke: none; }.footer-socials a:hover { opacity: .55; }
+@media (max-width: 720px) { .kit-graphic, .brand-card { border-width: 1px; } }

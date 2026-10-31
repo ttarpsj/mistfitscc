@@ -1,0 +1,15 @@
+.club-carousel { position: relative; min-height: 420px; padding: 28px 24px 30px; color: #f5f4ef; background: #24382c; overflow: hidden; }
+.club-slides { position: relative; min-height: 340px; }
+.club-slide { position: absolute; inset: 0; display: grid; align-content: space-between; opacity: 0; transform: translateY(24px); pointer-events: none; transition: opacity .55s ease, transform .55s ease; }
+.club-slide.active { opacity: 1; transform: none; pointer-events: auto; }
+.club-slide > span, .brand-label, .worldwide-top > p { font-size: 10px; font-weight: 700; letter-spacing: .06em; }
+.club-slide h2 { max-width: 900px; font-size: clamp(52px, 8vw, 124px); }
+.club-slide p { max-width: 270px; margin: 0; font-size: 14px; line-height: 1.18; }
+.carousel-dots { display: flex; gap: 8px; position: absolute; bottom: 30px; right: 24px; }
+.carousel-dots button { width: 8px; height: 8px; padding: 0; border: 1px solid #f5f4ef; border-radius: 50%; background: transparent; cursor: pointer; transition: background .2s, transform .2s; }
+.carousel-dots button.active { background: #f5f4ef; transform: scale(1.15); }
+.worldwide-section { padding: 22px 24px 96px; background: #f5f4ef; border-top: 1px solid #222522; }
+.worldwide-top { display: grid; grid-template-columns: 20% 1.4fr .8fr; gap: 20px; margin-bottom: 60px; }
+.worldwide-top > p { margin: 3px 0 0; }.worldwide-top h2 { font-size: clamp(44px, 6.5vw, 104px); }.worldwide-top > div { align-self: end; }.worldwide-lede { max-width: 270px; margin: 0; font-size: 17px; line-height: 1.16; letter-spacing: -.035em; }.brand-label { margin: 48px 0 0; }
+.brand-carousel { overflow: hidden; margin: 0 -24px; }.brand-track { display: flex; width: max-content; gap: 8px; padding: 0 24px; scroll-behavior: smooth; overflow-x: auto; scrollbar-width: none; }.brand-track::-webkit-scrollbar { display: none; }.brand-card { display: grid; place-items: center; width: calc((100vw - 72px) / 4); aspect-ratio: 1; background: #a7b5ab; color: #24382c; font-size: clamp(18px, 2.1vw, 32px); font-weight: 800; letter-spacing: -.06em; }.brand-card:nth-child(2n) { background: #24382c; color: #f5f4ef; }.brand-card:nth-child(3n) { background: #d8dbd1; color: #222522; }.brand-card:nth-child(5n) { background: #617968; color: #f5f4ef; }
+@media (max-width: 720px) { .club-carousel { min-height: 390px; padding: 18px 16px 23px; }.club-slides { min-height: 330px; }.club-slide h2 { font-size: 16vw; }.carousel-dots { right: 16px; bottom: 23px; }.worldwide-section { padding: 16px 16px 68px; }.worldwide-top { display: block; margin-bottom: 38px; }.worldwide-top h2 { margin: 52px 0 28px; }.worldwide-top > div { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: end; }.brand-label { margin: 0; }.brand-carousel { margin: 0 -16px; }.brand-track { gap: 6px; padding: 0 16px; }.brand-card { width: calc((100vw - 42px) / 2); } }
