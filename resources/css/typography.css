@@ -1,0 +1,50 @@
+:root {
+    --font-pragmatica-extended: "Pragmatica Extended", "pragmatica-extended", Arial, Helvetica, sans-serif;
+}
+
+/* Display and uppercase interface typography. The fallback preserves the layout
+   until the licensed Pragmatica Extended webfont is provided. */
+h1,
+h2,
+h3,
+.wordmark,
+.shop-mark,
+.hero h1,
+.mistfits-marquee p,
+.brand-card,
+.desktop-nav,
+.mobile-nav,
+.section-label,
+.eyebrow,
+.shop-announcement,
+.rides-announcement,
+.shop-header nav,
+.rides-header nav,
+.shop-tools,
+.shop-kicker,
+.shop-crumb,
+.collection-toolbar,
+.product-name-price,
+.product-actions,
+.product-status,
+.detail-status,
+.detail-action,
+.back-link,
+.ride-location-heading,
+.ride-location > span,
+.ride-location strong,
+.map-label,
+.map-coordinates,
+.footer-top > span,
+.footer-top p,
+.footer-bottom,
+.shop-footer,
+.big-cta,
+.text-actions,
+.carousel-controls,
+.race-list,
+.journal-entry p,
+.kit-item p,
+.brand-label {
+    font-family: var(--font-pragmatica-extended);
+}

@@ -1,0 +1,5 @@
+.season-reel { display: inline-block; width: 10.2ch; height: .82em; overflow: hidden; vertical-align: -.06em; white-space: nowrap; }
+.season-reel-value { display: block; will-change: transform, opacity; }
+.season-reel-value.is-rolling { animation: season-roll .16s cubic-bezier(.22, .61, .36, 1) both; }
+@keyframes season-roll { 0% { opacity: 0; transform: translateY(90%); } 20% { opacity: 1; } 100% { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .season-reel-value { animation: none !important; } }

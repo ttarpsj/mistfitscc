@@ -1,16 +1,7 @@
-# MISTFITS merchandise catalog
+# Product catalog
 
-The `/shop` page reads every `.json` file in this folder when Laravel renders the page and when the static Pages export runs. Add, remove, or edit an item here—no database or Blade changes are needed.
+The shop reads `products.json` in this directory. The older individual JSON files are retained for reference and are not loaded by the shop. Product prices are numeric USD amounts; all current products are sold out.
 
-Each item supports:
+Put numbered product photos in `public/images/product-N/`, named `product-N-001.png`, `product-N-002.webp`, and so on. They are discovered in numerical order. A `product-chart.png`, `.webp`, or `.jpg` in the same folder appears separately in the size guide. Do not include unverified specifications in public-facing fields.
 
-```json
-{
-  "name": "MISTFITS / RACE JERSEY",
-  "type": "SHORT SLEEVE JERSEY",
-  "tone": "ink",
-  "order": 1
-}
-```
-
-`tone` can be `ink`, `paper`, `grid`, or `line`. `order` controls the card position.
+Run `npm run build` and `php scripts/export-static.php` to regenerate the GitHub Pages site after changes.

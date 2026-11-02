@@ -1,0 +1,36 @@
+.gallery-page { min-width: 0; background: #fff; color: #050505; }
+.standard-header { min-height: 76px; padding: 15px 22px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #050505; }
+.standard-header .wordmark { color: #050505; }
+.standard-header .desktop-nav { color: #050505; }
+.standard-header .nav-social-icons img { filter: brightness(0) !important; }
+.standard-header .menu-toggle span { background: #050505 !important; }
+.gallery-main { padding: 56px 24px 72px; display: grid; gap: 28px; }
+.gallery-hero { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #050505; }
+.gallery-hero video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.gallery-collection { display: grid; gap: 18px; }
+.gallery-photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.gallery-photo { aspect-ratio: 4 / 5; margin: 0; overflow: hidden; background: #050505; }
+.gallery-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: opacity .4s ease; }
+.gallery-photo img.is-changing { opacity: 0; }
+.gallery-collection-controls { display: flex; justify-content: flex-end; gap: 8px; }
+.gallery-collection-controls button { width: 32px; height: 32px; padding: 0; border: 1px solid #050505; border-radius: 50%; background: transparent; color: #050505; cursor: pointer; font: inherit; }
+.gallery-collection-controls button:hover, .gallery-collection-controls button:focus-visible { background: #050505; color: #fff; }
+
+@media (max-width: 720px) {
+    .standard-header { min-height: 65px; padding: 13px 16px; }
+    .standard-header .desktop-nav { display: none; }
+    .gallery-main { padding: 36px 16px 48px; gap: 16px; }
+    .gallery-collection { gap: 12px; }
+}
+
+@media (max-width: 900px) {
+    .gallery-photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+}
+
+@media (max-width: 600px) {
+    .gallery-photo-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-photo img { transition: none; }
+}
